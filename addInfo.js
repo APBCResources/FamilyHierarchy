@@ -1,5 +1,5 @@
-const {MongoClient} = require('/node_modules/mongodb/');
-
+//const {MongoClient} = require('/node_modules/mongodb/');
+import { MongoClient } from "/node_modules/mongodb/";
 export async function getData(){
     /**
      * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.

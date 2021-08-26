@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href = "index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+        body > div {
+            padding-top: 120px;
+	padding-bottom: 120px;
+        }
+
+        p {
+text-align: center;
+        }
+    </style>
+   
+</head>
+<body>
+    
+    <div class="container">
+        <form>
+            <h1>  </h1>
+          <h2 style="text-align: center;">Add Info!!</h2>
+          <div>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur commodo risus, nec pellentesque turpis efficitur non.</p>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="first">First Name</label>
+                <input type="text" class="form-control" placeholder="" id="first">
+              </div>
+            </div>
+            <!--  col-md-6   -->
+     
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="last">Last Name</label>
+                <input type="text" class="form-control" placeholder="" id="last">
+              </div>
+            </div>
+            <!--  col-md-6   -->
+          </div>
+          
+ 
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="Date">Date Of Birth</label>
+                <input type="Date" name="dob" class="form-control" id="Date" placeholder="" required>
+              </div>
+            </div>
+            <!--  col-md-6   -->
+      
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="sex">Gender</label>
+                <select id="sex" class="form-control browser-default custom-select">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="unspesified">Unspecified</option>
+            </select>
+              </div>
+            </div>
+            <!--  col-md-6   -->
+          </div>
+      
+      <!--Father'sname-->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="first">Father's First Name</label>
+                <input type="text" class="form-control" placeholder="" id="first">
+              </div>
+            </div>
+            <!--  col-md-6   -->
+     
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="last">Father's Last Name</label>
+                <input type="text" class="form-control" placeholder="" id="last">
+              </div>
+            </div>
+            <!--  col-md-6   -->
+          </div>
+
+ <!--Mother'sname-->
+ <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="first">Mother's First Name</label>
+        <input type="text" class="form-control" placeholder="" id="first">
+      </div>
+    </div>
+    <!--  col-md-6   -->
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="last">Mother's Last Name</label>
+        <input type="text" class="form-control" placeholder="" id="last">
+      </div>
+    </div>
+    <!--  col-md-6   -->
+  </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="Country">Country</label>
+                <select id="Country" class="form-control browser-default custom-select">
+                    <option value="India">India</option>
+                    <option value="Usa">Usa</option>
+                  
+                </select>
+              </div>
+      
+      
+            </div>
+            <!--  col-md-6   -->
+      
+            <div class="col-md-6">
+      
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="phone">
+              </div>
+            </div>
+            <!--  col-md-6   -->
+          </div>
+          <!--  row   -->
+      
+      
+          <div class="row">
+            <div class="col-md-6">
+      
+              <div class="form-group">
+                <label for="url">LinkedIn <small>Please include http://</small></label>
+                <input type="url" class="form-control" id="url" placeholder="url">
+              </div>
+            </div>
+            <!--  col-md-6   -->
+      
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="url">Facebook Link <small>Please include http://</small></label>
+                <input type="url" class="form-control" id="url" placeholder="url">
+              </div>
+      
+            </div>
+            <!--  col-md-6   -->
+          </div>
+          <!--  row   -->
+      
+      
+      
+          <label for="newsletter"></label>
+          <div class="checkbox">
+      
+            <label>
+              <input type="checkbox" value="Sure!" id="newsletter">  I accept the termss and Conditions.
+            </label>
+          </div>
+      
+      
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-const {MongoClient} = require('mongodb');
+const {MongoClient} = require('/node_modules/mongodb/');
 
 export async function getData(){
     /**

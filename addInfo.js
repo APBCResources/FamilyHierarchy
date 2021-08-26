@@ -1,6 +1,6 @@
 const {MongoClient} = require('mongodb');
 
-async function main(){
+export async function getData(){
     /**
      * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
      * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
@@ -24,4 +24,4 @@ async function main(){
     }
 }
 
-main().catch(console.error);
+//getData().catch(console.error);

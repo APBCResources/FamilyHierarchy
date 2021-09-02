@@ -1,7 +1,7 @@
 {
-    "app_id": "familyhierarchyproject-jkymw",
+    "app_id": "familyhierarchy-iorqb",
     "config_version": 20210101,
-    "name": "FamilyHierarchyProject",
+    "name": "FamilyHierarchy",
     "location": "IN-MB",
     "deployment_model": "LOCAL"
 }

@@ -24,8 +24,8 @@
 
 exports = async function(payload) {
 const mongodb = context.services.get("mongodb-atlas");
-const eventsdb = mongodb.db("Attendance");
-const eventscoll = eventsdb.collection("Attendance");
+const eventsdb = mongodb.db("UserInfo");
+const eventscoll = eventsdb.collection("UserMainFamilyData");
 const result= await eventscoll.insertOne(payload.query);
 var id = result.insertedId.toString();
 if(result) {

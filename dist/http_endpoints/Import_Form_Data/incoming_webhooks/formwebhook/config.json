@@ -11,5 +11,5 @@
     "respond_result": true,
     "disable_arg_logs": true,
     "fetch_custom_user_data": false,
-    "create_user_on_auth": false
+    "create_user_on_auth": true
 }

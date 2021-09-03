@@ -1,38 +1,38 @@
-exports = async function(payload, response) {
-  // Convert the request body from BSON to a JSON object and then pull out relevant fields
-  const { someField } = JSON.parse(payload.body.text());
-  // If the request is missing required fields or something else is wrong, respond with an error
-  if (!someField) {
-    response.setStatusCode(400)
-    response.setBody(`Could not find "someField" in the webhook request body.`);
-  }
-  // Execute application logic, such as working with MongoDB
-  const cluster = context.services.get('mongodb-atlas');
-  const requests = cluster.db("UserInfo").collection("UserMainFamilyData");
-  try {
-    const { insertedId } = await requests.insertOne({ someField });
-    // Respond with an affirmative result
-    response.setStatusCode(200)
-    response.setBody(`Successfully created a document for the request with _id: ${insertedId}.`);
-  } catch (err) {
-    // If the insert fails for some reason, respond with an error
-    response.setStatusCode(500)
-    response.setBody(`Failed to create a document for the request. ${err}`)
-  }
+// exports = async function(payload, response) {
+//   // Convert the request body from BSON to a JSON object and then pull out relevant fields
+//   const { someField } = JSON.parse(payload.body.text());
+//   // If the request is missing required fields or something else is wrong, respond with an error
+//   if (!someField) {
+//     response.setStatusCode(400)
+//     response.setBody(`Could not find "someField" in the webhook request body.`);
+//   }
+//   // Execute application logic, such as working with MongoDB
+//   const cluster = context.services.get('mongodb-atlas');
+//   const requests = cluster.db("UserInfo").collection("UserMainFamilyData");
+//   try {
+//     const { insertedId } = await requests.insertOne({ someField });
+//     // Respond with an affirmative result
+//     response.setStatusCode(200)
+//     response.setBody(`Successfully created a document for the request with _id: ${insertedId}.`);
+//   } catch (err) {
+//     // If the insert fails for some reason, respond with an error
+//     response.setStatusCode(500)
+//     response.setBody(`Failed to create a document for the request. ${err}`)
+//   }
+// }
+
+
+exports = async function(payload) {
+const mongodb = context.services.get("mongodb-atlas");
+const eventsdb = mongodb.db("Attendance");
+const eventscoll = eventsdb.collection("Attendance");
+const result= await eventscoll.insertOne(payload.query);
+var id = result.insertedId.toString();
+if(result) {
+return JSON.stringify(id,false,false);
 }
-
-
-// exports = async function(payload) {
-// const mongodb = context.services.get("mongodb-atlas");
-// const eventsdb = mongodb.db("Attendance");
-// const eventscoll = eventsdb.collection("Attendance");
-// const result= await eventscoll.insertOne(payload.query);
-// var id = result.insertedId.toString();
-// if(result) {
-// return JSON.stringify(id,false,false);
-// }
-// return { text: `Error saving` };
-// }
+return { text: `Error saving` };
+}
 
 
 // // This function is the webhook's request handler.

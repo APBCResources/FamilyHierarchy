@@ -1,0 +1,17 @@
+{
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "create_date": {
+            "bsonType": "date"
+        },
+        "password": {
+            "bsonType": "string"
+        },
+        "usrname": {
+            "bsonType": "string"
+        }
+    },
+    "title": "test"
+}

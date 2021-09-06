@@ -1,0 +1,15 @@
+{
+    "collection": "test",
+    "database": "SiteUserInfo",
+    "roles": [
+        {
+            "name": "default",
+            "apply_when": {},
+            "read": true,
+            "insert": true,
+            "delete": true,
+            "search": true,
+            "additional_fields": {}
+        }
+    ]
+}

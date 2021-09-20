@@ -11,6 +11,25 @@
 </head>
 <body>
     <!-- tree -->
+    <div id="mySidebar" class="sidebar" style = "width : 400px">
+     
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+       <div class="line">
+        <div id="avatar"></div>
+      <h3>Add a relative</h3>
+    </div>
+    <hr>
+   
+    <p class="para">Which relative are you adding?</p>
+  
+
+   
+      
+      </div>
+      
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">Add Member</button>  
+        
     <div class="body genealogy-body genealogy-scroll">
         <div class="genealogy-tree">
             <ul>
@@ -422,6 +441,16 @@
         e.stopPropagation();
     });
 });
+function openNav() {
+  document.getElementById("mySidebar").style.width = "400px";
+  document.getElementById("main").style.marginLeft = "400px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+    </script>
     </script>
         
 </body>

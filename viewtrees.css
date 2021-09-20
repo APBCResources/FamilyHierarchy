@@ -121,3 +121,106 @@
   background-color :#000;
   z-index: 1;
 }
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidebar {
+    height: 100%;
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 80px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    align-items: left;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 30px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 30px;}
+    .sidebar a {font-size: 18px;}
+  }
+  
+  #avatar {
+   
+    background-image: url('http://i.stack.imgur.com/Dj7eP.jpg');
+    
+  
+    width: 50px;
+    height: 50px;
+
+  
+    background-size: cover;
+
+   
+    background-position: top center;
+
+   
+    border-radius: 50%;
+    display:inline-block;
+    margin-right:10px;
+}
+
+h3{
+    font-weight: 700;
+    color: white;
+   
+    display:inline-block;
+}
+.line{
+    display: flex;
+    justify-content: safe;
+}
+.para{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: white;
+    padding: 8px;
+}

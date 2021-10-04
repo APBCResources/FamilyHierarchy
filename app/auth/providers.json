@@ -52,6 +52,14 @@
             {
                 "required": false,
                 "name": "email"
+            },
+            {
+                "required": false,
+                "name": "min_age"
+            },
+            {
+                "required": false,
+                "name": "max_age"
             }
         ],
         "redirect_uris": [

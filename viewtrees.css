@@ -38,9 +38,10 @@
 
 /* The popup form - hidden by default */
 .form-popup {
+  top:12%;
+  left:36%;
   display: none;
   position: fixed;
-  top: 0;
   justify-content: center;
   align-items: center;
   border: 3px solid #f1f1f1;
@@ -50,8 +51,8 @@
 /* Add styles to the form container */
 .form-container {
   max-width: 300px;
-  padding: 45px;
-  background-color: rgba(245, 238, 238, 0.8);
+  padding: 54px;
+  background-color: rgba(245, 238, 238, 1);
 }
 
 /* Full-width input fields */
@@ -77,6 +78,7 @@
   border: none;
   cursor: pointer;
   width: 100%;
+  margin-top: 21px;
   margin-bottom:10px;
   opacity: 0.8;
 }

@@ -11,20 +11,36 @@
 </head>
 <body>
     
-    <div id="mySidebar" class="sidebar" style = "width : 400px">
+    <!-- <div id="mySidebar" class="sidebar" style = "width : 400px">
      
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
        <div class="line">
         <div id="avatar"></div>
       <h3>Add a relative</h3>
-    </div>
+    </div> -->
     <hr>
    
     
       </div>
+      <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Add Member</h1>
+
+          <label for="pname"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" name="pname" required>
       
-      <div id="main">
-        <button class="openbtn" onclick="openNav()">Add Member</button>  
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+          
+      
+          <button type="submit" class="btn">Add</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+      
+      <!-- <div id="main">
+        <button class="openbtn" onclick="openNav()">Add Member</button>   -->
         
     <div class="body genealogy-body genealogy-scroll">
         <div class="genealogy-tree">
@@ -35,7 +51,7 @@
                     <a href="javascript:void(0);">
                         <div class="member-view-box">
                             <div class="member-image">
-                                <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
+                                <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member" onclick="openForm()">
                                 <div class="member-details">
                                     <h3>John Doe</h3>
                                 </div>
@@ -47,7 +63,7 @@
                             <a href="javascript:void(0);">
                                 <div class="member-view-box">
                                     <div class="member-image">
-                                        <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
+                                        <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member" onclick="openForm()">
                                         <div class="member-details">
                                             <h3>Member 1</h3>
                                         </div>
@@ -345,7 +361,7 @@
                                             <a href="javascript:void(0);">
                                                 <div class="member-view-box">
                                                     <div class="member-image">
-                                                        <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
+                                                        <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member" onclick="openForm()">
                                                         <div class="member-details">
                                                             <h3>John Doe</h3>
                                                         </div>
@@ -426,25 +442,48 @@
     </div>
 
      <script>
-        $(function () {
-    $('.genealogy-tree ul').hide();
-    $('.genealogy-tree>ul').show();
-    $('.genealogy-tree ul.active').show();
-    $('.genealogy-tree li').on('click', function (e) {
-        var children = $(this).find('> ul');
-        if (children.is(":visible")) children.hide('fast').removeClass('active');
-        else children.show('fast').addClass('active');
-        e.stopPropagation();
+        $(document).ready(function() {
+            $("a").click(function() {
+                openForm();
+            });
+        });
+//         $(function () {
+//     $('.genealogy-tree ul').hide();
+//     $('.genealogy-tree>ul').show();
+//     $('.genealogy-tree ul.active').show();
+//     $('.genealogy-tree li').on('click', function (e) {
+//         var children = $(this).find('> ul');
+//         if (children.is(":visible")) children.hide('fast').removeClass('active');
+//         else children.show('fast').addClass('active');
+//         e.stopPropagation();
+//     });
+//     $('.genealogy-tree li').on('click', function (openNav) {
+     
+//     });
+// });
+$(function () {
+    // $('.genealogy-tree ul').hide();
+    // $('.genealogy-tree>ul').show();
+    // $('.genealogy-tree ul.active').show();
+    $('.genealogy-tree li').on('click', function (openNav) {
+
     });
 });
-function openNav() {
-  document.getElementById("mySidebar").style.width = "400px";
-  document.getElementById("main").style.marginLeft = "400px";
+// function openNav() {
+//   document.getElementById("mySidebar").style.width = "400px";
+//   document.getElementById("main").style.marginLeft = "400px";
+// }
+
+// function closeNav() {
+//   document.getElementById("mySidebar").style.width = "0";
+//   document.getElementById("main").style.marginLeft= "0";
+// }
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
 }
 
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
 }
     </script>
     </script>
